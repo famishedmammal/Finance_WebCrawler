@@ -1,3 +1,10 @@
+/*------------------------------
+* getter.java
+* Description: Main utility class used by the project, for extracting financial & industry data.
+*
+* By: Harrison Walters
+-------------------------------*/
+
 package Clockwork;
 
 import java.io.BufferedReader;
