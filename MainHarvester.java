@@ -57,6 +57,10 @@ public class MainHarvester {
 		//writeInfo();
 	}
 	
+	/*--------------------- loadCompanies() routine--------------------------*
+	 * Extract information from all companies in list, and write it to custom ".bdat" files.
+	 *---------------------------------------------------------------------------*/
+	
 	public static void writeGeneral(String type) {
 		
 		for(String company: companies) {
@@ -100,6 +104,10 @@ public class MainHarvester {
 		label.setText( "["+String.valueOf(Integer.valueOf(label.getText().substring(0,label.getText().indexOf("]")))+1)+"]" );
 	        
 	}
+	
+	/*--------------------- loadCompanies() routine--------------------------*
+	 * Load the list of companies-to-track to main memory
+	 *---------------------------------------------------------------------------*/
 	
 	public static void loadCompanies() {
 		companies = new ArrayList<String>();
@@ -244,13 +252,17 @@ public class MainHarvester {
         
 	}
 	
-	/*------------------------------
-	* Unimplemented. stores gathered information to a dropbox, so that it can be accessed by other machines in the server farm
-	* -------------------------------*/
+	/*--------------------- updateDropbox() routine--------------------------*
+	 * Unimplemented. stores gathered information to a dropbox, so that it can be accessed by other machines in the server farm
+	 *---------------------------------------------------------------------------*/
 	
 	private static void updateDropbox() {
 		
 	}
+	
+	/*--------------------- createAndShowGUI() routine--------------------------*
+	 * compiles frame elements and displays it
+	 *---------------------------------------------------------------------------*/
 	
 	private static void createAndShowGUI() {
 
