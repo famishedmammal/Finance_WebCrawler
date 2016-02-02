@@ -244,9 +244,11 @@ public class MainHarvester {
         
 	}
 	
+	/*------------------------------
+	* Unimplemented. stores gathered information to a dropbox, so that it can be accessed by other machines in the server farm
+	* -------------------------------*/
+	
 	private static void updateDropbox() {
-		
-		// 
 		
 	}
 	
