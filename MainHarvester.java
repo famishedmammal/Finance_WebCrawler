@@ -1,3 +1,10 @@
+/*------------------------------
+* MainHarvester.java
+* Description: Base program for extracting financial data from a handful of websites.
+*
+* By: Harrison Walters
+-------------------------------*/
+
 package Clockwork;
 
 import java.awt.Color;
