@@ -1,4 +1,4 @@
-# WebsiteCrawler
+# Financial Web-Crawler
 
 ![alt tag](http://i.imgur.com/a9xqDaq.jpg)
 
