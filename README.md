@@ -4,4 +4,4 @@
 
 ### About
 
-Java project that crawls yahoo finance and other business sites for stock prices &amp; industry information. Used by my basic AI for stock trading.
+Java project that crawls yahoo finance and other business sites for stock prices and industry information for a given list of companies-to-moniter. Used by my basic AI for stock trading.
