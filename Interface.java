@@ -1,3 +1,10 @@
+/*------------------------------
+* Interface.java
+* Description: A debug interface, for viewing information that is gathered by the webcrawler
+*
+* By: Harrison Walters
+-------------------------------*/
+
 package Clockwork;
 
 import java.awt.Color;
