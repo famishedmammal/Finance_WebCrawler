@@ -47,7 +47,6 @@ public class MainHarvester {
 	static int year;
 	
 	public static void main(String[] args) {
-		
 		loadCompanies();
 		
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
@@ -55,24 +54,20 @@ public class MainHarvester {
 	               createAndShowGUI();
 	          }
 	        });
-		
-		
 		//writeInfo();
-		
 	}
 	
 	public static void writeGeneral(String type) {
 		
 		for(String company: companies) {
-
-				try {
+			try {
 					
-					String filename = null;
-					if (type.equals("general"))
-						filename = "harvested_data/"+company+".bdat";
-					else if (type.equals("competition"))
-						filename = "harvested_competition/"+company+".bdat";
-				    FileWriter fw = new FileWriter(filename,true);
+			String filename = null;
+			if (type.equals("general"))
+				filename = "harvested_data/"+company+".bdat";
+			else if (type.equals("competition"))
+				filename = "harvested_competition/"+company+".bdat";
+			FileWriter fw = new FileWriter(filename,true);
 
 	            	Calendar rightNow = Calendar.getInstance();
 	            	int hr = rightNow.get(Calendar.HOUR_OF_DAY);
@@ -80,20 +75,19 @@ public class MainHarvester {
 	            	int dy = rightNow.get(Calendar.DAY_OF_YEAR);
 	            	int yr = rightNow.get(Calendar.YEAR);
 				   
-					String timeLog = yr+","+dy+","+hr+","+mn;
-					fw.write("<"+timeLog+">\n");
-					if (type.equals("general"))
-						fw.write(String.join(",", getter.generalData(company))+"\n");
-					else if (type.equals("competition"))
-						fw.write(String.join(",", getter.competition(company))+"\n");
-					fw.write("\n");
+			String timeLog = yr+","+dy+","+hr+","+mn;
+			fw.write("<"+timeLog+">\n");
+			if (type.equals("general"))
+				fw.write(String.join(",", getter.generalData(company))+"\n");
+			else if (type.equals("competition"))
+				fw.write(String.join(",", getter.competition(company))+"\n");
+			fw.write("\n");
 				    
-				    fw.close();
+			 fw.close();
 				    
-				} catch (Exception e) {
-					e.printStackTrace();
-				} 
-	        
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
 		}
 		
 		JLabel label = null;
@@ -127,8 +121,8 @@ public class MainHarvester {
 	
 	public static void addComponentsToPane(Container pane) {
 
+	// Set up debug viewing window, titles & boundaries
         pane.setLayout(null);
-        
         UIManager.put("Label.font", new Font("Verdana",1,13));
         JLabel title = new JLabel("Current Time");
         title.setBounds(5, 5, 150, 20);
@@ -157,6 +151,7 @@ public class MainHarvester {
         JLabel titleE = new JLabel("to");
         titleE.setBounds(360+100, 5+30+2, 150, 20);
         
+        // Set up debug viewing window, spinners
         JSpinner spinner = new JSpinner();
         spinner.setBounds(40+20, 7+50+22, 70, 20);
         spinner.setValue(20);
@@ -173,6 +168,7 @@ public class MainHarvester {
         h2.setBounds(280+100, 5+43+2, 70, 20);
         h2.setValue(13);
         
+        // Set up debug viewing window, buttons
         JButton b1 = new JButton("Begin Rec");
         b1.setBounds(276+100, 400-65, 100, 24);
         b1.addActionListener(new ActionListener() { 
@@ -187,7 +183,7 @@ public class MainHarvester {
             } 
         });
         
-        
+	// Add elements to frame
         frame.add(title);
         frame.add(titleB);
         frame.add(titleC);
@@ -249,6 +245,8 @@ public class MainHarvester {
 	}
 	
 	private static void updateDropbox() {
+		
+		// 
 		
 	}
 	
