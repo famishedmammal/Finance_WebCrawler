@@ -50,9 +50,9 @@ public class MainHarvester {
 		loadCompanies();
 		
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
-	          public void run() {
-	               createAndShowGUI();
-	          }
+	        	public void run() {
+	               		createAndShowGUI();
+	          	}
 	        });
 		//writeInfo();
 	}
